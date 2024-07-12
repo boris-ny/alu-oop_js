@@ -1,19 +1,21 @@
+// create a class called Residence
 class Residence {
   constructor(name, address) {
     this.name = name;
     this.address = address;
     this.occupied = false;
   }
-
+  // create a method called getDetails that returns a string with the name, address, and occupied status of the residence
   getDetails() {
     return `${this.name}, located at ${this.address}. Occupied: ${this.occupied}`;
   }
-
+  // create a method called isOccupied that returns the occupied status of the residence
   isOccupied() {
     return this.occupied;
   }
 }
 
+// create a class called DormRoom that extends Residence
 class DormRoom extends Residence {
   constructor(name, address, size) {
     super(name, address);
@@ -25,17 +27,19 @@ class DormRoom extends Residence {
   }
 }
 
+// create a class called Apartment that extends Residence
 class Apartment extends Residence {
   constructor(name, address, numberOfBedrooms) {
     super(name, address);
     this.numberOfBedrooms = numberOfBedrooms;
   }
-
+  // create a method called calculateRent that returns the rent for the apartment
   calculateRent() {
     return this.numberOfBedrooms * 300;
   }
 }
 
+// create a class called Student
 class Student {
   constructor(name, studentID, gender) {
     this.name = name;
@@ -43,7 +47,7 @@ class Student {
     this.gender = gender;
     this.residence = null;
   }
-
+  // create a method called assignResidence that assigns a residence to the student
   assignResidence(residence) {
     if (!residence.isOccupied()) {
       this.residence = residence;
@@ -54,6 +58,7 @@ class Student {
   }
 }
 
+// create a class called MaintenanceRequest
 class MaintenanceRequest {
   constructor(description, submittedBy) {
     this.description = description;
